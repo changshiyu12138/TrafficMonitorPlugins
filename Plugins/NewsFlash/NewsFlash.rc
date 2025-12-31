@@ -1,0 +1,146 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PLUGIN_NAME         "Financial News"
+    IDS_PLUGIN_DESCRIPTION  "Display real-time financial news from multiple sources"
+    IDS_PLUGIN_ITEM_NAME    "Financial News"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTIONS_DIALOG DIALOGEX 0, 0, 320, 240
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "News Flash Settings"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,200,215,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,215,50,14
+    LISTBOX         IDC_SOURCE_LIST,10,10,300,170,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add Source",IDC_ADD_SOURCE,10,190,70,20
+    PUSHBUTTON      "Edit",IDC_EDIT_SOURCE,90,190,70,20
+    PUSHBUTTON      "Delete",IDC_DELETE_SOURCE,170,190,70,20
+END
+
+IDD_MESSAGE_LIST_DIALOG DIALOGEX 0, 0, 500, 400
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Message List"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,430,375,60,20
+    LTEXT           "Unread Messages",IDC_STATIC,10,10,50,10
+    CONTROL         "",IDC_UNREAD_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,10,25,480,170
+    PUSHBUTTON      "Mark as Read",IDC_MARK_READ,10,200,80,20
+    LTEXT           "Read Messages",IDC_STATIC,10,225,50,10
+    CONTROL         "",IDC_READ_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,10,240,480,125
+    PUSHBUTTON      "Clear All",IDC_CLEAR_ALL,100,200,80,20
+END
+
+IDD_EDIT_SOURCE_DIALOG DIALOGEX 0, 0, 360, 260
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Source"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Name:",IDC_LABEL_NAME,10,12,60,10
+    EDITTEXT        IDC_SOURCE_NAME,75,10,270,12,ES_AUTOHSCROLL
+
+    LTEXT           "Prefix:",IDC_LABEL_PREFIX,10,32,60,10
+    EDITTEXT        IDC_SOURCE_PREFIX,75,30,80,12,ES_AUTOHSCROLL
+
+    LTEXT           "Type:",IDC_LABEL_TYPE,10,52,60,10
+    COMBOBOX        IDC_SOURCE_TYPE,75,50,120,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+
+    LTEXT           "URL:",IDC_LABEL_URL,10,72,60,10
+    EDITTEXT        IDC_SOURCE_URL,75,70,270,12,ES_AUTOHSCROLL
+
+    LTEXT           "Interval (sec):",IDC_LABEL_INTERVAL,10,92,80,10
+    EDITTEXT        IDC_SOURCE_INTERVAL,95,90,40,12,ES_AUTOHSCROLL | ES_NUMBER
+
+    CONTROL         "Enable this source",IDC_SOURCE_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,90,100,12
+
+    GROUPBOX        "JSON Mapping",IDC_GROUP_JSON,10,110,335,110
+    LTEXT           "Data path:",IDC_LABEL_DATA_PATH,20,128,60,10
+    EDITTEXT        IDC_JSON_DATA_PATH,90,126,245,12,ES_AUTOHSCROLL
+
+    LTEXT           "ID field:",IDC_LABEL_ID_FIELD,20,148,60,10
+    EDITTEXT        IDC_JSON_ID_FIELD,90,146,245,12,ES_AUTOHSCROLL
+
+    LTEXT           "Title field:",IDC_LABEL_TITLE_FIELD,20,168,60,10
+    EDITTEXT        IDC_JSON_TITLE_FIELD,90,166,245,12,ES_AUTOHSCROLL
+
+    LTEXT           "Time field:",IDC_LABEL_TIME_FIELD,20,188,60,10
+    EDITTEXT        IDC_JSON_TIME_FIELD,90,186,245,12,ES_AUTOHSCROLL
+
+    LTEXT           "URL field:",IDC_LABEL_URL_FIELD_TEXT,20,208,60,10
+    EDITTEXT        IDC_JSON_URL_FIELD,90,206,245,12,ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON   "OK",IDOK,215,230,60,18
+    PUSHBUTTON      "Cancel",IDCANCEL,285,230,60,18
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
